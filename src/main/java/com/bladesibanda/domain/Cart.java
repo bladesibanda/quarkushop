@@ -10,12 +10,14 @@ import javax.validation.constraints.NotNull;
 
 import com.bladesibanda.domain.enums.CartStatus;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString(callSuper = true)
 @Entity
 @Table(name = "carts")
