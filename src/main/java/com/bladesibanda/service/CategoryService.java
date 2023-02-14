@@ -64,9 +64,10 @@ public class CategoryService {
     this.categoryRepository.deleteById(id);
   }
 
-  // public List<ProductDto> findProductsByCategoryId(Long id) {
-  // return this.productRepository.findAllByCategoryId(id)
-  // .stream()
-  // .map(Product)
-  // }
+  public List<ProductDto> findProductsByCategoryId(Long id) {
+    return this.productRepository.findAllByCategoryId(id)
+        .stream()
+        .map(ProductService::mapToDto)
+        .collect(Collectors.toList());
+  }
 }

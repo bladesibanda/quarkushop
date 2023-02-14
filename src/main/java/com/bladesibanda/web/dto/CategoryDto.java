@@ -1,5 +1,7 @@
 package com.bladesibanda.web.dto;
 
+import javax.validation.constraints.NotBlank;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +11,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CategoryDto {
   private Long id;
-  private String name, description;
+
+  @NotBlank
+  private String name;
+
+  @NotBlank
+  private String description;
   private Long products;
 }
